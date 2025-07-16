@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        body{
+            background-color: #adafb2;
+            height: 3000px;
+        }
+        html, body{
+            scroll-behavior: smooth;
+        }
+        .container{
+            position: relative; /*부모*/
+            background-color: #fff;
+            width: 375px;
+            height: 412px;
+            border: 1px solid #333;
+            border-radius: 12px;
+            margin: 100px auto; /*top, left, light, bittom*/
+            padding: 6px 16px; /* top bottom, left right*/
+            display: flex;
+            align-items: flex-end;/*교차축 정렬*/
+            gap: 20px; /*사이 간격*/
+            justify-content: center;/*메인축 정렬*/
+            flex-direction: column; /*vertical  row=horizon*/
+        }
+        .editBtn{
+            position: absolute;
+            left: 40px;
+            top:40px;
+        }
+        .btnTop{
+            position: fixed; /*고정 상태*/
+            right: 40px;
+            bottom: 40px;
+            background-color: red;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btnTop:hover{
+            background-color: dodgerblue;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="editBtn">Edit</button>
+        <button type="button">
+            <img src="./images/icon/home.svg" alt="home">
+        </button>
+        <button type="button">
+            <img src="./images/icon/clarendar.svg" alt="clarendar">
+        </button>
+        <button type="button">
+            <img src="./images/icon/setting.svg" alt="setting">
+        </button>
+    </div>
+    <a href="#" class="btnTop">TOP</a>
+</body>
+</html>
